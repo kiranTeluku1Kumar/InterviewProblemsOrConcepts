@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.java;
+package com.java.eight;
 
 import java.util.Arrays;
 import java.util.Collections;
