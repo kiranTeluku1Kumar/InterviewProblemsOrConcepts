@@ -7,3 +7,6 @@ Follow programs are there in repo.
 	
 2) This class to group the anagrams Using Java8 and also before Java8
 	Ex:- "eat" and "tea" are anagrams
+	
+3) Remove Suplicate Characters in String using Java8 and Before Java8
+	EX:- "create eat" output:-"creat"

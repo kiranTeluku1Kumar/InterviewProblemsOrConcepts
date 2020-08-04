@@ -1,11 +1,10 @@
-package com.java.eight;
+package com.java.sevenorbefore;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * This class to separate the anagrams ex:- "eat" and "tea" are anagrams

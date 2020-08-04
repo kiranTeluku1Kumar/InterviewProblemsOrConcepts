@@ -1,4 +1,4 @@
-package com.java.sevenorbefore;
+package com.java.eight;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * @author saiki
  *
  */
-public class StringAnagram {
+public class StringAnagramJava8 {
 
 	public static void main(String[] args) {
 		String[] strArray = new String[] {"eat","tea","nat","tan","bat"};
