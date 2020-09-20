@@ -27,3 +27,6 @@ Follow programs are there in repo.
 	From this Examination I found that,"matcher.find" will behave same as "matcher.matches" when find is used with ^<<pattern>>$
 	if without ^$ find method try to see pattern matches with substring instead of whole string.
 	This means if one of the substring matches the pattern then it will treat whole string as matched
+7) Singleton Design pattern
+	Note:- To Achieve Singleton first rule is to make constructor as private and provide factory method to return instance.
+	1) Eager Initialization

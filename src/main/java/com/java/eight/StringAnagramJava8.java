@@ -16,14 +16,7 @@ public class StringAnagramJava8 {
 
 	public static void main(String[] args) {
 		String[] strArray = new String[] {"eat","tea","nat","tan","bat"};
-		getCombinations(strArray);
-		//getCombinationsJava8(strArray);
-		/*
-		 * String[] strArraySorted = new String[strArray.length]; strArraySorted =
-		 * strArray; Arrays.sort(strArraySorted); for(String strFromArraySorted:
-		 * strArraySorted)
-		 * System.out.println(strFromArraySorted+"::::strFromArraySorted");
-		 */
+		getCombinationsJava8(strArray);
 	}
 	
 	public static void getCombinationsJava8(String[] strArray){
@@ -35,25 +28,4 @@ public class StringAnagramJava8 {
 		
 		groupsOfAnagram.values().stream().forEach(System.out::println);
 	}
-	
-	
-	public static void getCombinations(String[] strArray){
-
-		Map<String, List<String>> groupsOfAnagram = new HashMap<>();
-		for(String str: strArray){
-			char[] charArray = str.toCharArray();
-			char[] beforeSort = charArray.clone();
-			String unsortedString = new String(beforeSort);
-			Arrays.sort(charArray);
-			System.out.println(unsortedString+"::for::"+str);
-
-			groupsOfAnagram.putIfAbsent(str, new LinkedList<String>());
-			groupsOfAnagram.get(str).add(unsortedString);
-		}
-
-		for(List<String> values: groupsOfAnagram.values()) {
-			System.out.println(values);
-		}
-	}
-
 }
