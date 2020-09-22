@@ -31,3 +31,4 @@ Follow programs are there in repo.
 	Note:- To Achieve Singleton first rule is to make constructor as private and provide factory method to return static instance.
 	1) Eager Initialization
 	2) Lazy Initialization
+	3) Lazy Initialization with thread safe
