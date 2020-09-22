@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 /**
  * This class to separate the anagrams ex:- "eat" and "tea" are anagrams
- * @author saiki
+ * @author teluki
  *
  */
 public class StringAnagramJava8 {

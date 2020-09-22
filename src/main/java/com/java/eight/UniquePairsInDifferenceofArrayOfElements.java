@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  *  In same way sum of third element of list and k produces fifth element or sixth element of list i.e, 2+1=3
  *  In same way sum of fourth element of list and k produces fifth element or sixth element of list i.e, 2+1=3
  *  so here we end up with (1,2), (1,2), (2,3) and (2,3). but we need unique pairs so we should finally have (1,2) and(2,3) and answer should be 2
- * @author saiki
+ * @author teluki
  *
  */
 public class UniquePairsInDifferenceofArrayOfElements {

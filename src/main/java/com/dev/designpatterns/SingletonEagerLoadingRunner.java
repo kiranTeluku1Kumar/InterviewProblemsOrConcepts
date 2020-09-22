@@ -2,7 +2,7 @@ package com.dev.designpatterns;
 
 /**
  * This class is to test Singleton Eager Loading 
- * @author saiki
+ * @author teluki
  *
  */
 public class SingletonEagerLoadingRunner {

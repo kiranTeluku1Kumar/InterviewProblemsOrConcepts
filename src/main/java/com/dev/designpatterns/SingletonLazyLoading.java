@@ -1,5 +1,10 @@
 package com.dev.designpatterns;
 
+/**
+ * 
+ * @author teluki
+ *
+ */
 public class SingletonLazyLoading {
 	
 	private static SingletonLazyLoading singletonInitialization;

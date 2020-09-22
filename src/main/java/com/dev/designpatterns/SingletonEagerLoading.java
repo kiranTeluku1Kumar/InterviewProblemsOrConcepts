@@ -2,7 +2,7 @@ package com.dev.designpatterns;
 
 /**
  * This class will provide singleton class object with eager loading
- * @author saiki
+ * @author teluki
  *
  */
 public class SingletonEagerLoading {
