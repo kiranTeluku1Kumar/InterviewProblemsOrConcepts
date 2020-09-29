@@ -9,6 +9,8 @@ public class SingletonLazyLoadingThreadSafe {
 	
 	private static SingletonLazyLoadingThreadSafe singletonInitialization;
 	
+	private String name;
+	
 	private SingletonLazyLoadingThreadSafe() {
 		
 	}
@@ -18,5 +20,18 @@ public class SingletonLazyLoadingThreadSafe {
 			singletonInitialization = new SingletonLazyLoadingThreadSafe();
 		}
 		return singletonInitialization;
+	}
+
+	public String getName() {
+		return getInstance().name;
+	}
+
+	public void setName(String name) {
+		getInstance().name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return name;
 	}
 }

@@ -30,5 +30,6 @@ Follow programs are there in repo.
 7) Singleton Design pattern
 	Note:- To Achieve Singleton first rule is to make constructor as private and provide factory method to return static instance.
 	1) Eager Initialization
-	2) Lazy Initialization
-	3) Lazy Initialization with thread safe
+	2) Lazy Initialization -- draw back multiple threaded env singleton will break.
+	3) Lazy Initialization with thread safe -- draw back is performance as as instance method it self synchronized. 
+	4) Lazy Initialization with thread safe minimize performance issues

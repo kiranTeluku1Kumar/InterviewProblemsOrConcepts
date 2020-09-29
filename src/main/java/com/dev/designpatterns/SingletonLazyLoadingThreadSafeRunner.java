@@ -1,5 +1,7 @@
 package com.dev.designpatterns;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.stream.IntStream;
 
 /**
@@ -10,18 +12,31 @@ import java.util.stream.IntStream;
 public class SingletonLazyLoadingThreadSafeRunner {
 
 	public static void main(String[] args) throws InterruptedException {
-		IntStream.range(0, 50).boxed().forEach(i -> SingletonLazyLoadingThreadSafeRunner.threadRunMethod());
+		LocalDateTime start = LocalDateTime.now();
+		IntStream.range(0, 1).boxed().forEach(i -> {
+			try {
+				SingletonLazyLoadingThreadSafeRunner.threadRunMethod();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
+		LocalDateTime end = LocalDateTime.now();
+		System.out.println("Time Taken "+Duration.between(start, end));
 	}
 	
-	public static void threadRunMethod() {
+	public static void threadRunMethod() throws InterruptedException{
 		Thread thread1 = new Thread(()->{
 			SingletonLazyLoadingThreadSafe singletonLazyLoading1 = SingletonLazyLoadingThreadSafe.getInstance(); 
-			System.out.println(singletonLazyLoading1.hashCode()+":::::SingletonLazyLoadingThreadSafe2,hashCode()");
+			singletonLazyLoading1.setName("singletonLazyLoading1");
+			System.out.println(singletonLazyLoading1.hashCode()+":::::SingletonLazyLoadingThreadSafe1,hashCode()::"+singletonLazyLoading1);
 		});
 		thread1.start();
+		thread1.join();
 		Thread thread2 = new Thread(()->{
 			SingletonLazyLoadingThreadSafe singletonLazyLoading2 = SingletonLazyLoadingThreadSafe.getInstance(); 
-			System.out.println(singletonLazyLoading2.hashCode()+":::::SingletonLazyLoadingThreadSafe2,hashCode()");
+			singletonLazyLoading2.setName("singletonLazyLoading2");
+			System.out.println(singletonLazyLoading2.hashCode()+":::::SingletonLazyLoadingThreadSafe2,hashCode()::"+singletonLazyLoading2);
 		});
 		thread2.start();
 		System.out.println("------------------------------------------------------------------");
