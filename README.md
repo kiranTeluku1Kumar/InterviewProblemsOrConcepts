@@ -32,5 +32,10 @@ Follow programs are there in repo.
 	1) Eager Initialization
 	2) Lazy Initialization -- draw back multiple threaded env singleton will break.
 	3) Lazy Initialization with thread safe -- draw back is performance as as instance method it self synchronized. 
-	4) Lazy Initialization with thread safe minimize performance issues --Still can break the singleton in case of cloning and Serialization.
+	4) Lazy Initialization with thread safe minimize performance issues --Still can break the singleton in case of cloning and 
+	   Serialization.
 	5) Lazy Initialization with thread and clone safe minimize performance issues --Still can break the singleton in case of Serialization.
+ 8) Multiply given array numbers and return last two digits Using Java 8
+ 	Note:- Here we have take care of max limit of number like 2 billion in case of "int" Data Type 9 Quintillion in case of "long" data    
+ 	       type.   
+ 	
