@@ -22,7 +22,8 @@ Follow programs are there in repo.
 	 In same way sum of second element of list and k produces third element or fourth element of list i.e, 1+1 =2
 	 In same way sum of third element of list and k produces fifth element or sixth element of list i.e, 2+1=3
  	In same way sum of fourth element of list and k produces fifth element or sixth element of list i.e, 2+1=3
- 	so here we end up with (1,2), (1,2), (2,3) and (2,3). but we need unique pairs so we should finally have (1,2) and(2,3) and answer should be 2
+ 	so here we end up with (1,2), (1,2), (2,3) and (2,3). but we need unique pairs so we should finally have (1,2) and(2,3) and answer   
+ 	should be 2
 6) Pattern and Matcher Examples from java.util.regex package
 	From this Examination I found that,"matcher.find" will behave same as "matcher.matches" when find is used with ^<<pattern>>$
 	if without ^$ find method try to see pattern matches with substring instead of whole string.
@@ -37,5 +38,7 @@ Follow programs are there in repo.
 	5) Lazy Initialization with thread and clone safe minimize performance issues --Still can break the singleton in case of Serialization.
  8) Multiply given array numbers and return last two digits Using Java 8
  	Note:- Here we have take care of max limit of number like 2 billion in case of "int" Data Type 9 Quintillion in case of "long" data    
- 	       type.   
+ 	       type.         
+ 9) Program to demo Thread Dead Lock using two threads.
+ 	Note:- To avoid Dad Lock we have to follow same locking sequence in two threads.	       
  	
