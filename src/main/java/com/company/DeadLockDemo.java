@@ -8,7 +8,8 @@ public class DeadLockDemo {
 		
 		Thread t1 = new Thread( () -> {
 								synchronized (LOCK_ONE) {
-									System.out.println("Thread one Syncronized before sleep..");
+									System.out.println("LOCK_ONE t1 lock::"+Thread.currentThread().getName());
+									System.out.println("Thread one Synchronized before sleep..");
 									
 									try {
 										Thread.sleep(1000);
@@ -17,13 +18,14 @@ public class DeadLockDemo {
 									}
 									synchronized (LOCK_TWO) {
 										
-										System.out.println("Thread one Syncronized after sleep..");
+										System.out.println("Thread one Synchronized after sleep..");
 									}
 								}
 						}); 
 		Thread t2 = new Thread( () -> {
 						synchronized (LOCK_TWO) {
-							System.out.println("Thread two Syncronized before sleep..");
+							System.out.println("LOCK_TWO t2 lock::"+Thread.currentThread().getName());
+							System.out.println("Thread two Synchronized before sleep..");
 							
 							try {
 								Thread.sleep(1000);
@@ -32,11 +34,12 @@ public class DeadLockDemo {
 							}
 							synchronized (LOCK_ONE) {
 								
-								System.out.println("Thread two Syncronized after sleep..");
+								System.out.println("Thread two Synchronized after sleep..");
 							}
 						}
 				}); 
-		
+		t1.run();
+		t2.run();
 		t1.start();
 		t2.start();
 	}
