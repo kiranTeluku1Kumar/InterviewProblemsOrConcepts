@@ -43,11 +43,11 @@ Follow programs are there in repo.
  	Note:- Here we have take care of max limit of number like 2 billion (with 9 Zeros and 10 digit Number) in case of 
  	"int" Data Type 9 Quintillion(18 zeros and 19 digit number) in case 
  	of "long" data type.         
- 9) Program to demo Thread Dead Lock using two threads.
- 	Note 1:- To avoid Dad Lock we have to follow same locking sequence in two threads.	       
+ 9) Program to demo Thread Dead Lock using two threads.<br>
+ 	Note 1:- To avoid Dead Lock we have to follow same locking sequence in two threads.	       
  	Note 2:- Default Priority for new Thread is 5 and range for priority is 1-10. If the priority not set in given range 
  		then it will throw Illegal Argument Exception.
- 	Note 3:- Thread Run(i.e, t1.run() ) will use main thread to run start method will create new thread to run
+ 	Note 3:- Thread Run(i.e, t1.run() ) will use main thread to run, start method will create new thread to run.
  		Here is sample output that says main thread when using run method
  			LOCK_ONE t1 lock::main --> This is using t1.run()
 			Thread one Synchronized before sleep..
