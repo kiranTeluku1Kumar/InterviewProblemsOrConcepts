@@ -59,3 +59,9 @@ Follow programs are there in repo.
 			Thread one Synchronized before sleep..
 			LOCK_TWO t2 lock::Thread-1 --> This is using t2.start()
 			Thread two Synchronized before sleep..
+10) Converting Comma seperated integers to Binary Tree and then do a Vertical Ordering of Tree Structure.<br>
+	Steps:- 
+	1) Sort the nodes in ascending, pick the middle value as root and, compare every node value,
+		if it is lesser than root and depndening on it insert right or left.
+	2) We need to traverse top tpo bottom and mark every node distance from root node
+	
